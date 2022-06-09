@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0052E876285235C8009095BC /* TodaysRoutineUnityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052E875285235C8009095BC /* TodaysRoutineUnityTest.swift */; };
 		00E9D866284F750A004EE115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D865284F750A004EE115 /* AppDelegate.swift */; };
 		00E9D868284F750A004EE115 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D867284F750A004EE115 /* SceneDelegate.swift */; };
 		00E9D86A284F750A004EE115 /* TodaysRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D869284F750A004EE115 /* TodaysRoutineViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0052E875285235C8009095BC /* TodaysRoutineUnityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysRoutineUnityTest.swift; sourceTree = "<group>"; };
 		00E9D862284F750A004EE115 /* HelpMySkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpMySkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E9D865284F750A004EE115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00E9D867284F750A004EE115 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0052E87428523598009095BC /* TodaysRoutineUnityTests */ = {
+			isa = PBXGroup;
+			children = (
+				0052E875285235C8009095BC /* TodaysRoutineUnityTest.swift */,
+			);
+			path = TodaysRoutineUnityTests;
+			sourceTree = "<group>";
+		};
 		00E9D859284F750A004EE115 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		00E9D87B284F750B004EE115 /* HelpMySkinTests */ = {
 			isa = PBXGroup;
 			children = (
+				0052E87428523598009095BC /* TodaysRoutineUnityTests */,
 				00E9D87C284F750B004EE115 /* HelpMySkinTests.swift */,
 			);
 			path = HelpMySkinTests;
@@ -345,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0052E876285235C8009095BC /* TodaysRoutineUnityTest.swift in Sources */,
 				00E9D87D284F750B004EE115 /* HelpMySkinTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
