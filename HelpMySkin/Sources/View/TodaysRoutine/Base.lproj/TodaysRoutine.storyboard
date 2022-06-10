@@ -27,7 +27,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="A chuva está forte hoje! É importante manter a proteção solar, mas com baixa intensidade na hidratação." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QV-Tk-BeM">
-                                        <rect key="frame" x="10" y="56" width="275.5" height="55"/>
+                                        <rect key="frame" x="10" y="56" width="260.5" height="55"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
-                                    <constraint firstItem="46u-a9-QJX" firstAttribute="leading" secondItem="4QV-Tk-BeM" secondAttribute="trailing" constant="10" id="2ZK-SY-3E6"/>
+                                    <constraint firstItem="46u-a9-QJX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4QV-Tk-BeM" secondAttribute="trailing" constant="10" id="2ZK-SY-3E6"/>
                                     <constraint firstAttribute="bottom" secondItem="4QV-Tk-BeM" secondAttribute="bottom" constant="20" id="4Aj-Cp-ll7"/>
                                     <constraint firstItem="46u-a9-QJX" firstAttribute="centerY" secondItem="UEv-Sm-TVc" secondAttribute="centerY" id="5PZ-bY-oEu"/>
                                     <constraint firstItem="46u-a9-QJX" firstAttribute="width" secondItem="wU5-UF-Qxh" secondAttribute="width" multiplier="1.02381" id="QUV-pw-gma"/>
@@ -86,6 +86,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lastTimeRequestText" destination="BqG-5z-jFN" id="ySj-1p-scD"/>
+                        <outlet property="temperatureText" destination="46u-a9-QJX" id="fje-e1-0MW"/>
                         <outlet property="weatherCardImage" destination="CNr-I2-Thu" id="4ZQ-tU-mYR"/>
                     </connections>
                 </viewController>
