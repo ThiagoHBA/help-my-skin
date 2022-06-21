@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0022194328536CD3002872DE /* lastTimeRequestTextUnityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0022194228536CD3002872DE /* lastTimeRequestTextUnityTest.swift */; };
+		002219452853731F002872DE /* TemperatureTextUnityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002219442853731F002872DE /* TemperatureTextUnityTest.swift */; };
+		0052E876285235C8009095BC /* WeatherImageUnityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052E875285235C8009095BC /* WeatherImageUnityTest.swift */; };
 		00E9D866284F750A004EE115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D865284F750A004EE115 /* AppDelegate.swift */; };
 		00E9D868284F750A004EE115 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D867284F750A004EE115 /* SceneDelegate.swift */; };
 		00E9D86A284F750A004EE115 /* TodaysRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D869284F750A004EE115 /* TodaysRoutineViewController.swift */; };
@@ -16,6 +19,10 @@
 		00E9D87D284F750B004EE115 /* HelpMySkinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D87C284F750B004EE115 /* HelpMySkinTests.swift */; };
 		00E9D887284F750B004EE115 /* HelpMySkinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D886284F750B004EE115 /* HelpMySkinUITests.swift */; };
 		00E9D889284F750B004EE115 /* HelpMySkinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D888284F750B004EE115 /* HelpMySkinUITestsLaunchTests.swift */; };
+		0B72777C2858B6EA004B43D3 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B72777B2858B6EA004B43D3 /* TableViewController.swift */; };
+		0B7277962861EDED004B43D3 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7277952861EDED004B43D3 /* Notification.swift */; };
+		0B8379F02852196E001B7115 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8379EF2852196E001B7115 /* NotificationView.swift */; };
+		0B8379F22852198B001B7115 /* NotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8379F12852198B001B7115 /* NotificationView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0022194228536CD3002872DE /* lastTimeRequestTextUnityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lastTimeRequestTextUnityTest.swift; sourceTree = "<group>"; };
+		002219442853731F002872DE /* TemperatureTextUnityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTextUnityTest.swift; sourceTree = "<group>"; };
+		0052E875285235C8009095BC /* WeatherImageUnityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherImageUnityTest.swift; sourceTree = "<group>"; };
 		00E9D862284F750A004EE115 /* HelpMySkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpMySkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E9D865284F750A004EE115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00E9D867284F750A004EE115 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,10 @@
 		00E9D882284F750B004EE115 /* HelpMySkinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpMySkinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E9D886284F750B004EE115 /* HelpMySkinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMySkinUITests.swift; sourceTree = "<group>"; };
 		00E9D888284F750B004EE115 /* HelpMySkinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMySkinUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0B72777B2858B6EA004B43D3 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		0B7277952861EDED004B43D3 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		0B8379EF2852196E001B7115 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		0B8379F12852198B001B7115 /* NotificationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0052E87428523598009095BC /* TodaysRoutineUnityTests */ = {
+			isa = PBXGroup;
+			children = (
+				0052E875285235C8009095BC /* WeatherImageUnityTest.swift */,
+				0022194228536CD3002872DE /* lastTimeRequestTextUnityTest.swift */,
+				002219442853731F002872DE /* TemperatureTextUnityTest.swift */,
+			);
+			path = TodaysRoutineUnityTests;
+			sourceTree = "<group>";
+		};
 		00E9D859284F750A004EE115 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +134,7 @@
 		00E9D87B284F750B004EE115 /* HelpMySkinTests */ = {
 			isa = PBXGroup;
 			children = (
+				0052E87428523598009095BC /* TodaysRoutineUnityTests */,
 				00E9D87C284F750B004EE115 /* HelpMySkinTests.swift */,
 			);
 			path = HelpMySkinTests;
@@ -145,8 +170,7 @@
 		00E9D898284F8794004EE115 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				00E9D8A0284F8972004EE115 /* Models */,
-				00E9D89F284F8954004EE115 /* Services */,
+				0B7277942861EDD9004B43D3 /* Models */,
 				00E9D899284F87A5004EE115 /* View */,
 			);
 			path = Sources;
@@ -155,6 +179,8 @@
 		00E9D899284F87A5004EE115 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0B72777A2858B6DE004B43D3 /* TableView */,
+				0B8379EE28521867001B7115 /* NotificationView */,
 				00E9D89A284F87E0004EE115 /* TodaysRoutine */,
 			);
 			path = View;
@@ -169,18 +195,29 @@
 			path = TodaysRoutine;
 			sourceTree = "<group>";
 		};
-		00E9D89F284F8954004EE115 /* Services */ = {
+		0B72777A2858B6DE004B43D3 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				0B72777B2858B6EA004B43D3 /* TableViewController.swift */,
 			);
-			path = Services;
+			path = TableView;
 			sourceTree = "<group>";
 		};
-		00E9D8A0284F8972004EE115 /* Models */ = {
+		0B7277942861EDD9004B43D3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0B7277952861EDED004B43D3 /* Notification.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0B8379EE28521867001B7115 /* NotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				0B8379EF2852196E001B7115 /* NotificationView.swift */,
+				0B8379F12852198B001B7115 /* NotificationView.xib */,
+			);
+			path = NotificationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +328,7 @@
 				00E9D872284F750B004EE115 /* LaunchScreen.storyboard in Resources */,
 				00E9D86F284F750B004EE115 /* Assets.xcassets in Resources */,
 				00E9D86D284F750A004EE115 /* TodaysRoutine.storyboard in Resources */,
+				0B8379F22852198B001B7115 /* NotificationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +375,10 @@
 			files = (
 				00E9D86A284F750A004EE115 /* TodaysRoutineViewController.swift in Sources */,
 				00E9D866284F750A004EE115 /* AppDelegate.swift in Sources */,
+				0B7277962861EDED004B43D3 /* Notification.swift in Sources */,
 				00E9D868284F750A004EE115 /* SceneDelegate.swift in Sources */,
+				0B72777C2858B6EA004B43D3 /* TableViewController.swift in Sources */,
+				0B8379F02852196E001B7115 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +386,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0022194328536CD3002872DE /* lastTimeRequestTextUnityTest.swift in Sources */,
+				002219452853731F002872DE /* TemperatureTextUnityTest.swift in Sources */,
+				0052E876285235C8009095BC /* WeatherImageUnityTest.swift in Sources */,
 				00E9D87D284F750B004EE115 /* HelpMySkinTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
