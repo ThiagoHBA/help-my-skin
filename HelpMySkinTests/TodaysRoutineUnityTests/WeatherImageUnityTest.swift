@@ -9,10 +9,10 @@ import XCTest
 @testable import HelpMySkin
 
 class WeatherImageUnityTest: XCTestCase {
-    var controller : TodaysRoutineViewController!
+    var controller : WeatherCard!
 
     override func setUpWithError() throws {
-        controller = TodaysRoutineViewController()
+        controller = WeatherCard()
     }
 
     override func tearDownWithError() throws {}

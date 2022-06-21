@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherCard" customModule="HelpMySkin" customModuleProvider="target">
+            <connections>
+                <outlet property="lastTimeRequestText" destination="Cic-cm-k6s" id="LsG-CG-SlJ"/>
+                <outlet property="temperatureText" destination="g9H-hu-KFE" id="G7G-iQ-Reh"/>
+                <outlet property="weatherCardImage" destination="8dn-YE-PYE" id="Xn0-4c-U44"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="200"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THz-vX-IlN">
+                    <rect key="frame" x="0.0" y="69" width="394" height="131"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="15 minutos atrás" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cic-cm-k6s">
+                            <rect key="frame" x="10" y="20" width="100" height="16"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18˚C " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9H-hu-KFE">
+                            <rect key="frame" x="311" y="50.5" width="63" height="30"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fortaleza, Ceará" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tc-V8-p4X">
+                            <rect key="frame" x="299" y="88.5" width="87" height="14"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="A chuva está forte hoje! É importante manter a proteção solar, mas com baixa intensidade na hidratação." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TJ-at-pjM">
+                            <rect key="frame" x="10" y="42" width="260.5" height="79"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.bolt.rain.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8dn-YE-PYE">
+                            <rect key="frame" x="323" y="-30" width="61" height="62"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="fYp-iI-grC"/>
+                                <constraint firstAttribute="width" constant="61" id="hH4-ys-wNW"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8dn-YE-PYE" secondAttribute="trailing" constant="10" id="6In-eH-HkA"/>
+                        <constraint firstItem="g9H-hu-KFE" firstAttribute="centerY" secondItem="THz-vX-IlN" secondAttribute="centerY" id="BOD-ql-cm2"/>
+                        <constraint firstItem="g9H-hu-KFE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6TJ-at-pjM" secondAttribute="trailing" constant="15" id="JsU-AH-DIA"/>
+                        <constraint firstAttribute="trailing" secondItem="g9H-hu-KFE" secondAttribute="trailing" constant="20" id="Mbr-Lt-ood"/>
+                        <constraint firstItem="g9H-hu-KFE" firstAttribute="top" secondItem="8dn-YE-PYE" secondAttribute="bottom" constant="21" id="Rl3-Qe-35z"/>
+                        <constraint firstAttribute="bottom" secondItem="6TJ-at-pjM" secondAttribute="bottom" constant="10" id="XBP-eB-eRQ"/>
+                        <constraint firstItem="Cic-cm-k6s" firstAttribute="top" secondItem="THz-vX-IlN" secondAttribute="top" constant="20" id="aGv-Mc-eOU"/>
+                        <constraint firstItem="Cic-cm-k6s" firstAttribute="leading" secondItem="THz-vX-IlN" secondAttribute="leading" constant="10" id="fP0-Vw-wdS"/>
+                        <constraint firstItem="5Tc-V8-p4X" firstAttribute="top" secondItem="g9H-hu-KFE" secondAttribute="bottom" constant="8" id="hqI-fr-knp"/>
+                        <constraint firstItem="6TJ-at-pjM" firstAttribute="top" secondItem="Cic-cm-k6s" secondAttribute="bottom" constant="6" id="iyt-C7-9Vv"/>
+                        <constraint firstItem="6TJ-at-pjM" firstAttribute="leading" secondItem="THz-vX-IlN" secondAttribute="leading" constant="10" id="r4s-oN-cmx"/>
+                        <constraint firstItem="5Tc-V8-p4X" firstAttribute="centerX" secondItem="g9H-hu-KFE" secondAttribute="centerX" id="z5B-eD-hwx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="THz-vX-IlN" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.655" id="5Wf-2W-Cp8"/>
+                <constraint firstItem="THz-vX-IlN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6qj-Ly-V2T"/>
+                <constraint firstItem="THz-vX-IlN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="U8M-8u-GAV"/>
+                <constraint firstItem="THz-vX-IlN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="dAT-u8-1KD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cloud.bolt.rain.fill" catalog="system" width="122" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

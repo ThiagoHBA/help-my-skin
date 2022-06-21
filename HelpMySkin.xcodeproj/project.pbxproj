@@ -10,6 +10,8 @@
 		0022194328536CD3002872DE /* lastTimeRequestTextUnityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0022194228536CD3002872DE /* lastTimeRequestTextUnityTest.swift */; };
 		002219452853731F002872DE /* TemperatureTextUnityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002219442853731F002872DE /* TemperatureTextUnityTest.swift */; };
 		0052E876285235C8009095BC /* WeatherImageUnityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052E875285235C8009095BC /* WeatherImageUnityTest.swift */; };
+		00BC36502861ECCE003CEF41 /* WeatherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BC364E2861ECCE003CEF41 /* WeatherCard.swift */; };
+		00BC36512861ECCE003CEF41 /* WeatherCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00BC364F2861ECCE003CEF41 /* WeatherCard.xib */; };
 		00E9D866284F750A004EE115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D865284F750A004EE115 /* AppDelegate.swift */; };
 		00E9D868284F750A004EE115 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D867284F750A004EE115 /* SceneDelegate.swift */; };
 		00E9D86A284F750A004EE115 /* TodaysRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D869284F750A004EE115 /* TodaysRoutineViewController.swift */; };
@@ -44,6 +46,8 @@
 		0022194228536CD3002872DE /* lastTimeRequestTextUnityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lastTimeRequestTextUnityTest.swift; sourceTree = "<group>"; };
 		002219442853731F002872DE /* TemperatureTextUnityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTextUnityTest.swift; sourceTree = "<group>"; };
 		0052E875285235C8009095BC /* WeatherImageUnityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherImageUnityTest.swift; sourceTree = "<group>"; };
+		00BC364E2861ECCE003CEF41 /* WeatherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCard.swift; sourceTree = "<group>"; };
+		00BC364F2861ECCE003CEF41 /* WeatherCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCard.xib; sourceTree = "<group>"; };
 		00E9D862284F750A004EE115 /* HelpMySkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpMySkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E9D865284F750A004EE115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00E9D867284F750A004EE115 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 				002219442853731F002872DE /* TemperatureTextUnityTest.swift */,
 			);
 			path = TodaysRoutineUnityTests;
+			sourceTree = "<group>";
+		};
+		008382E92861EB19009DAE82 /* WeatherCard */ = {
+			isa = PBXGroup;
+			children = (
+				00BC364E2861ECCE003CEF41 /* WeatherCard.swift */,
+				00BC364F2861ECCE003CEF41 /* WeatherCard.xib */,
+			);
+			path = WeatherCard;
 			sourceTree = "<group>";
 		};
 		00E9D859284F750A004EE115 = {
@@ -185,6 +198,7 @@
 		00E9D89A284F87E0004EE115 /* TodaysRoutine */ = {
 			isa = PBXGroup;
 			children = (
+				008382E92861EB19009DAE82 /* WeatherCard */,
 				00E9D86B284F750A004EE115 /* TodaysRoutine.storyboard */,
 				00E9D869284F750A004EE115 /* TodaysRoutineViewController.swift */,
 			);
@@ -322,6 +336,7 @@
 				00E9D872284F750B004EE115 /* LaunchScreen.storyboard in Resources */,
 				00E9D86F284F750B004EE115 /* Assets.xcassets in Resources */,
 				00E9D86D284F750A004EE115 /* TodaysRoutine.storyboard in Resources */,
+				00BC36512861ECCE003CEF41 /* WeatherCard.xib in Resources */,
 				0B8379F22852198B001B7115 /* NotificationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +385,7 @@
 				00E9D86A284F750A004EE115 /* TodaysRoutineViewController.swift in Sources */,
 				00E9D866284F750A004EE115 /* AppDelegate.swift in Sources */,
 				00E9D868284F750A004EE115 /* SceneDelegate.swift in Sources */,
+				00BC36502861ECCE003CEF41 /* WeatherCard.swift in Sources */,
 				0B8379F02852196E001B7115 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
