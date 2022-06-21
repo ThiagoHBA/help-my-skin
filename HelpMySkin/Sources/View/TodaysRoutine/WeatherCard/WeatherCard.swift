@@ -13,15 +13,19 @@ class WeatherCard: UIView {
     @IBOutlet weak var weatherCardImage: UIImageView!
     @IBOutlet weak var lastTimeRequestText: UILabel!
     @IBOutlet weak var temperatureText: UILabel!
+    let temperatureService : TemperatureService = TemperatureService()
     override init(frame: CGRect) {
         super.init(frame: frame)
         initSubViews()
-        configureCard()
+        Task {
+                let data = await fetchApiData()
+                configureCard(temperatureData: data)
+        }
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func obtainWeatherIcon (temperature: Double) -> UIImage {
+    func obtainWeatherIcon (temperature: Int) -> UIImage {
          if temperature < 10 {
             return UIImage(systemName: "cloud.fill")!
         } else if temperature >= 10 && temperature < 20 {
@@ -56,10 +60,19 @@ class WeatherCard: UIView {
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
     }
-    func configureCard() {
-        weatherCardImage.image = obtainWeatherIcon(temperature: 5)
-        lastTimeRequestText.text = obtainLastTimeRequestText(newTime: 23)
-        temperatureText.text = obtainTemperatureText(newValue: 5)
+    func configureCard(temperatureData : Temperature?) {
+        if temperatureData != nil {
+            weatherCardImage.image = obtainWeatherIcon(temperature: Int(temperatureData!.temp))
+            lastTimeRequestText.text = obtainLastTimeRequestText(newTime: 0)
+            temperatureText.text = obtainTemperatureText(newValue: Int(temperatureData!.temp))
+        }
     }
-
+    func fetchApiData() async -> Temperature? {
+        do {
+            return try await temperatureService.currentTemperature()
+        } catch {
+            print("Error")
+        }
+        return nil
+    }
 }

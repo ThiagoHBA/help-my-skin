@@ -12,6 +12,10 @@
 		0052E876285235C8009095BC /* WeatherImageUnityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0052E875285235C8009095BC /* WeatherImageUnityTest.swift */; };
 		00BC36502861ECCE003CEF41 /* WeatherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BC364E2861ECCE003CEF41 /* WeatherCard.swift */; };
 		00BC36512861ECCE003CEF41 /* WeatherCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00BC364F2861ECCE003CEF41 /* WeatherCard.xib */; };
+		00E7026928627C4400BEBABC /* TemperatureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E7026828627C4400BEBABC /* TemperatureModel.swift */; };
+		00E7026D28627CCB00BEBABC /* TemperatureServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E7026C28627CCB00BEBABC /* TemperatureServiceProtocol.swift */; };
+		00E7026F28627D0900BEBABC /* TemperatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E7026E28627D0900BEBABC /* TemperatureService.swift */; };
+		00E7027228627EF000BEBABC /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E7027128627EF000BEBABC /* HttpError.swift */; };
 		00E9D866284F750A004EE115 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D865284F750A004EE115 /* AppDelegate.swift */; };
 		00E9D868284F750A004EE115 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D867284F750A004EE115 /* SceneDelegate.swift */; };
 		00E9D86A284F750A004EE115 /* TodaysRoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E9D869284F750A004EE115 /* TodaysRoutineViewController.swift */; };
@@ -48,6 +52,10 @@
 		0052E875285235C8009095BC /* WeatherImageUnityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherImageUnityTest.swift; sourceTree = "<group>"; };
 		00BC364E2861ECCE003CEF41 /* WeatherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCard.swift; sourceTree = "<group>"; };
 		00BC364F2861ECCE003CEF41 /* WeatherCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCard.xib; sourceTree = "<group>"; };
+		00E7026828627C4400BEBABC /* TemperatureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureModel.swift; sourceTree = "<group>"; };
+		00E7026C28627CCB00BEBABC /* TemperatureServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureServiceProtocol.swift; sourceTree = "<group>"; };
+		00E7026E28627D0900BEBABC /* TemperatureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureService.swift; sourceTree = "<group>"; };
+		00E7027128627EF000BEBABC /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		00E9D862284F750A004EE115 /* HelpMySkin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpMySkin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E9D865284F750A004EE115 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00E9D867284F750A004EE115 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +115,38 @@
 				00BC364F2861ECCE003CEF41 /* WeatherCard.xib */,
 			);
 			path = WeatherCard;
+			sourceTree = "<group>";
+		};
+		00E7026728627C3800BEBABC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00E7026828627C4400BEBABC /* TemperatureModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		00E7026A28627CA700BEBABC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				00E7026C28627CCB00BEBABC /* TemperatureServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		00E7026B28627CB200BEBABC /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				00E7026E28627D0900BEBABC /* TemperatureService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		00E7027028627EDF00BEBABC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				00E7027128627EF000BEBABC /* HttpError.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		00E9D859284F750A004EE115 = {
@@ -179,7 +219,8 @@
 		00E9D898284F8794004EE115 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				00E9D8A0284F8972004EE115 /* Models */,
+				00E7027028627EDF00BEBABC /* Enums */,
+				00E7026728627C3800BEBABC /* Models */,
 				00E9D89F284F8954004EE115 /* Services */,
 				00E9D899284F87A5004EE115 /* View */,
 			);
@@ -208,15 +249,10 @@
 		00E9D89F284F8954004EE115 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				00E7026B28627CB200BEBABC /* Implementation */,
+				00E7026A28627CA700BEBABC /* Protocols */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		00E9D8A0284F8972004EE115 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		0B8379EE28521867001B7115 /* NotificationView */ = {
@@ -382,8 +418,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E7026D28627CCB00BEBABC /* TemperatureServiceProtocol.swift in Sources */,
+				00E7027228627EF000BEBABC /* HttpError.swift in Sources */,
 				00E9D86A284F750A004EE115 /* TodaysRoutineViewController.swift in Sources */,
+				00E7026F28627D0900BEBABC /* TemperatureService.swift in Sources */,
 				00E9D866284F750A004EE115 /* AppDelegate.swift in Sources */,
+				00E7026928627C4400BEBABC /* TemperatureModel.swift in Sources */,
 				00E9D868284F750A004EE115 /* SceneDelegate.swift in Sources */,
 				00BC36502861ECCE003CEF41 /* WeatherCard.swift in Sources */,
 				0B8379F02852196E001B7115 /* NotificationView.swift in Sources */,
