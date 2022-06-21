@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -73,20 +73,29 @@
                                     <constraint firstAttribute="height" constant="100" id="88p-0L-Mq3"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2tl-Bd-2Of">
+                                <rect key="frame" x="20" y="527" width="374" height="335"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2tl-Bd-2Of" firstAttribute="top" secondItem="UEv-Sm-TVc" secondAttribute="bottom" constant="8.5" id="BAh-KK-1LU"/>
                             <constraint firstAttribute="trailing" secondItem="UEv-Sm-TVc" secondAttribute="trailing" constant="10" id="Brq-Cn-F5f"/>
                             <constraint firstItem="UEv-Sm-TVc" firstAttribute="top" secondItem="CNr-I2-Thu" secondAttribute="bottom" constant="-45" id="CAI-lR-pes"/>
                             <constraint firstItem="UEv-Sm-TVc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="G3C-yD-idT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CNr-I2-Thu" secondAttribute="trailing" constant="10" id="HBM-XD-Z7r"/>
                             <constraint firstItem="UEv-Sm-TVc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pgi-3p-tGr"/>
+                            <constraint firstItem="2tl-Bd-2Of" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qCj-5S-Epl"/>
+                            <constraint firstItem="2tl-Bd-2Of" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wY8-m4-9AV"/>
                             <constraint firstItem="UEv-Sm-TVc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="yQt-q3-FgL"/>
+                            <constraint firstItem="2tl-Bd-2Of" firstAttribute="centerX" secondItem="UEv-Sm-TVc" secondAttribute="centerX" id="zIo-rm-9nU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="lastTimeRequestText" destination="BqG-5z-jFN" id="ySj-1p-scD"/>
+                        <outlet property="tableView" destination="2tl-Bd-2Of" id="xjS-AV-IzX"/>
                         <outlet property="temperatureText" destination="46u-a9-QJX" id="fje-e1-0MW"/>
                         <outlet property="weatherCardImage" destination="CNr-I2-Thu" id="4ZQ-tU-mYR"/>
                     </connections>
