@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UEv-Sm-TVc">
-                                <rect key="frame" x="10" y="387.5" width="394" height="131"/>
+                                <rect key="frame" x="10" y="208" width="394" height="131"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 minutos atrás" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqG-5z-jFN">
                                         <rect key="frame" x="10" y="30" width="374" height="16"/>
@@ -67,28 +67,49 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.bolt.rain.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CNr-I2-Thu">
-                                <rect key="frame" x="294" y="333" width="110" height="102"/>
+                                <rect key="frame" x="284" y="161.5" width="110" height="102"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="7yt-Pd-0vf"/>
                                     <constraint firstAttribute="height" constant="100" id="88p-0L-Mq3"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2tl-Bd-2Of">
-                                <rect key="frame" x="20" y="527" width="374" height="335"/>
+                                <rect key="frame" x="20" y="434" width="374" height="335"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SEXTA-FEIRA, 03 DE JUNHO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1P-fs-Oum">
+                                <rect key="frame" x="20" y="70" width="374" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bom dia, Fulano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3n-ds-5Ac">
+                                <rect key="frame" x="20" y="87" width="374" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cuidados de hoje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Un6-Xc-xmo">
+                                <rect key="frame" x="20" y="389" width="374" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2tl-Bd-2Of" firstAttribute="top" secondItem="UEv-Sm-TVc" secondAttribute="bottom" constant="8.5" id="BAh-KK-1LU"/>
+                            <constraint firstItem="2tl-Bd-2Of" firstAttribute="top" secondItem="UEv-Sm-TVc" secondAttribute="bottom" constant="95" id="BAh-KK-1LU"/>
                             <constraint firstAttribute="trailing" secondItem="UEv-Sm-TVc" secondAttribute="trailing" constant="10" id="Brq-Cn-F5f"/>
-                            <constraint firstItem="UEv-Sm-TVc" firstAttribute="top" secondItem="CNr-I2-Thu" secondAttribute="bottom" constant="-45" id="CAI-lR-pes"/>
-                            <constraint firstItem="UEv-Sm-TVc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="G3C-yD-idT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CNr-I2-Thu" secondAttribute="trailing" constant="10" id="HBM-XD-Z7r"/>
+                            <constraint firstItem="UEv-Sm-TVc" firstAttribute="top" secondItem="CNr-I2-Thu" secondAttribute="bottom" constant="-53" id="CAI-lR-pes"/>
+                            <constraint firstItem="UEv-Sm-TVc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-179.5" id="G3C-yD-idT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CNr-I2-Thu" secondAttribute="trailing" constant="20" id="HBM-XD-Z7r"/>
                             <constraint firstItem="UEv-Sm-TVc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pgi-3p-tGr"/>
                             <constraint firstItem="2tl-Bd-2Of" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qCj-5S-Epl"/>
-                            <constraint firstItem="2tl-Bd-2Of" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wY8-m4-9AV"/>
+                            <constraint firstItem="2tl-Bd-2Of" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-93" id="wY8-m4-9AV"/>
                             <constraint firstItem="UEv-Sm-TVc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="yQt-q3-FgL"/>
                             <constraint firstItem="2tl-Bd-2Of" firstAttribute="centerX" secondItem="UEv-Sm-TVc" secondAttribute="centerX" id="zIo-rm-9nU"/>
                         </constraints>
