@@ -22,5 +22,6 @@ extension Notification {
   static var sampleData = [
     Notification(title: "Bom dia!", description: "Comece seus cuidados de hoje"),
     Notification(title: "Boa noite!", description: "Não esqueça dos cuidados da noite!")
+    
   ]
 }
