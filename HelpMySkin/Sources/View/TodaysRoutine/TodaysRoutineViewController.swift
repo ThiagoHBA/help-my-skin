@@ -68,4 +68,10 @@ extension TodaysRoutineViewController: UITableViewDataSource, UITableViewDelegat
     cell.backgroundColor = UIColor(named: "Primary")
     return cell
   }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let storyboard = UIStoryboard(name: "NotificationSheet", bundle: nil)
+    let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "SheetViewController")
+    self.present(sheetPresentationController, animated: true, completion: nil)
+  }
 }
