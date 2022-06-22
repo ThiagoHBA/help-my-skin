@@ -19,7 +19,9 @@ class TodaysRoutineViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.separatorStyle = .none
+        let cellNib = UINib(nibName: NotificationView.identifier, bundle: .main)
+        tableView.register(cellNib, forCellReuseIdentifier: NotificationView.identifier)
         weatherCardImage.image = obtainWeatherIcon(temperature: 10)
         lastTimeRequestText.text = obtainLastTimeRequestText(newTime: 61)
         temperatureText.text = obtainTemperatureText(newValue: -30)
@@ -58,8 +60,10 @@ extension TodaysRoutineViewController: UITableViewDataSource, UITableViewDelegat
     return notifications.count
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    cell.textLabel?.text = notifications[indexPath.row].title
+    let cell = tableView.dequeueReusableCell(withIdentifier: NotificationView.identifier, for: indexPath) as! NotificationView
+//    cell.textLabel?.text = notifications[indexPath.row].title
+    cell.titleLabel?.text = notifications[indexPath.row].title
+    cell.descriptionLabel?.text = notifications[indexPath.row].description
     return cell
   }
 }
