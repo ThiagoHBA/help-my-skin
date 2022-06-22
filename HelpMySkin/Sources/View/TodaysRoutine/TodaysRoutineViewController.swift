@@ -20,19 +20,20 @@ class TodaysRoutineViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor(named: "Primary")
         let cellNib = UINib(nibName: NotificationView.identifier, bundle: .main)
         tableView.register(cellNib, forCellReuseIdentifier: NotificationView.identifier)
-        weatherCardImage.image = obtainWeatherIcon(temperature: 10)
+        weatherCardImage.image = obtainWeatherIcon(temperature: -30)
         lastTimeRequestText.text = obtainLastTimeRequestText(newTime: 61)
         temperatureText.text = obtainTemperatureText(newValue: -30)
     }
     func obtainWeatherIcon (temperature: Double) -> UIImage {
          if temperature < 10 {
-            return UIImage(systemName: "cloud.fill")!
+           return UIImage(named: "thunder")!
         } else if temperature >= 10 && temperature < 20 {
-            return UIImage(systemName: "cloud.sun.fill")!
+            return UIImage(named: "cloudy")!
         }
-        return UIImage(systemName: "sunrise.fill")!
+        return UIImage(named: "sunny")!
     }
     func obtainLastTimeRequestText(newTime: Int) -> String {
         if newTime <= 0 {
@@ -64,6 +65,7 @@ extension TodaysRoutineViewController: UITableViewDataSource, UITableViewDelegat
 //    cell.textLabel?.text = notifications[indexPath.row].title
     cell.titleLabel?.text = notifications[indexPath.row].title
     cell.descriptionLabel?.text = notifications[indexPath.row].description
+    cell.backgroundColor = UIColor(named: "Primary")
     return cell
   }
 }

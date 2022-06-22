@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,6 +26,8 @@
                 </imageView>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IT2-B9-D8h">
                     <rect key="frame" x="0.0" y="76" width="338" height="4"/>
+                    <color key="progressTintColor" name="Secondary"/>
+                    <color key="trackTintColor" name="CallToAction"/>
                 </progressView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN6-57-xOm">
                     <rect key="frame" x="75" y="14" width="247" height="22"/>
@@ -34,7 +37,7 @@
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="Primary"/>
             <constraints>
                 <constraint firstItem="lv9-fM-DTB" firstAttribute="top" secondItem="gN6-57-xOm" secondAttribute="bottom" constant="4" id="45w-Cd-sJA"/>
                 <constraint firstItem="IT2-B9-D8h" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="52V-Nd-FFE"/>
@@ -62,5 +65,14 @@
     </objects>
     <resources>
         <image name="sun" width="456.54000854492188" height="456.54000854492188"/>
+        <namedColor name="CallToAction">
+            <color red="0.98039215686274506" green="0.63529411764705879" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.64313725490196083" green="0.72941176470588232" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
