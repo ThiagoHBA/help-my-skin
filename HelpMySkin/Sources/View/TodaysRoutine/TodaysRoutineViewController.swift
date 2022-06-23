@@ -66,6 +66,9 @@ extension TodaysRoutineViewController: UITableViewDataSource, UITableViewDelegat
     cell.titleLabel?.text = notifications[indexPath.row].title
     cell.descriptionLabel?.text = notifications[indexPath.row].description
     cell.backgroundColor = UIColor(named: "Primary")
+    let bgColorView = UIView()
+    bgColorView.backgroundColor = UIColor(named: "Primary")
+    cell.selectedBackgroundView = bgColorView
     return cell
   }
   
