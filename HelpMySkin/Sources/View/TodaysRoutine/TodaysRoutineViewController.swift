@@ -29,11 +29,7 @@ class TodaysRoutineViewController: UIViewController {
         Task {
                 let data = await fetchApiData()
                 configureCard(temperatureData: data)
-        }
-//        weatherCardImage.image = obtainWeatherIcon(temperature: -30)
-//        lastTimeRequestText.text = obtainLastTimeRequestText(newTime: 61)
-//        temperatureText.text = obtainTemperatureText(newValue: -30)
-    }
+        }    }
     func obtainWeatherIcon (temperature: Int) -> UIImage {
          if temperature < 10 {
            return UIImage(named: "thunder")!
@@ -92,7 +88,6 @@ extension TodaysRoutineViewController: UITableViewDataSource, UITableViewDelegat
   }
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: NotificationView.identifier, for: indexPath) as! NotificationView
-//    cell.textLabel?.text = notifications[indexPath.row].title
     cell.titleLabel?.text = notifications[indexPath.row].title
     cell.descriptionLabel?.text = notifications[indexPath.row].description
     cell.iconImage.image = UIImage(named: notifications[indexPath.row].icon)
@@ -104,11 +99,12 @@ extension TodaysRoutineViewController: UITableViewDataSource, UITableViewDelegat
   }
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let storyboard = UIStoryboard(name: "NotificationSheet", bundle: nil)
-    let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "SheetViewController")
+    let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "SheetViewController") as! SheetViewController
+    sheetPresentationController.notification = notifications[indexPath.row]
     self.present(sheetPresentationController, animated: true, completion: nil)
   }
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
+      return .delete
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

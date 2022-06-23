@@ -9,9 +9,13 @@ import SwiftUI
 import StepperView
 
 struct NotificationSheetContentView: View {
-    let steps = [TextView(text:"Limpeza", font: .system(size: 14, weight: .semibold)),
-                 TextView(text:"Hidratação", font: .system(size: 14, weight: .semibold)),
-                 TextView(text:"Proteção solar", font: .system(size: 14, weight: .semibold))]
+  @EnvironmentObject var notification: Notification
+//    let steps = [TextView(text:"Limpeza", font: .system(size: 14, weight: .semibold)),
+//                 TextView(text:"Hidratação", font: .system(size: 14, weight: .semibold)),
+//                 TextView(text:"Proteção solar", font: .system(size: 14, weight: .semibold))]
+
+    
+  
     let indicators = [
         StepperIndicationType.custom(Image(systemName:"1.circle")
             .font(.largeTitle)
@@ -46,14 +50,14 @@ struct NotificationSheetContentView: View {
           Color("Secondary")
             VStack {
                 // swiftlint:disable line_length
-                Image("sun")
+              Image(notification.icon)
                     .resizable()
                     .frame(width: 50, height: 50, alignment: .center)
-                TextView(text: "Durante os dias quentes, há uma maior exposição ao sol e o nosso corpo produz mais suor, em busca da regularização da temperatura corporal. Usar muito hidratante pode obstruir os poros e causar espinhas, por isso a rotina deve ser adaptada. A oleosidade tende a aumentar.")
+              TextView(text: notification.description)
                     .padding()
                 // swiftlint:enable line_length
                 StepperView()
-                    .addSteps(steps)
+                .addSteps(notification.steps)
                     .indicators(indicators)
                     .stepIndicatorMode(StepperMode.vertical)
                     .addPitStops(pitStops)
@@ -79,6 +83,6 @@ struct NotificationSheetContentView: View {
 
 struct NotificationSheetContentView_Previews: PreviewProvider {
     static var previews: some View {
-      NotificationSheetContentView()
+      NotificationSheetContentView().environmentObject(Notification.sampleData[1])
     }
 }

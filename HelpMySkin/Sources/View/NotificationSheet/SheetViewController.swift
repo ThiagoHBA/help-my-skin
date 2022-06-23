@@ -9,7 +9,8 @@ import UIKit
 import SwiftUI
 
 class SheetViewController: UIViewController, UISheetPresentationControllerDelegate {
-  let swiftUIController = UIHostingController(rootView: NotificationSheetContentView())
+  var notification: Notification = Notification.sampleData[0]
+  
   override var sheetPresentationController: UISheetPresentationController {
     // swiftlint:disable force_cast
     presentationController as! UISheetPresentationController
@@ -17,9 +18,10 @@ class SheetViewController: UIViewController, UISheetPresentationControllerDelega
   }
   override func viewDidLoad() {
     super.viewDidLoad()
+    let swiftUIController = UIHostingController(rootView: NotificationSheetContentView().environmentObject(notification))
     addChild(swiftUIController)
     view.addSubview(swiftUIController.view)
-    setupConstraints()
+    setupConstraints(swiftUIController: swiftUIController)
     sheetPresentationController.delegate = self
     sheetPresentationController.selectedDetentIdentifier = .large
     sheetPresentationController.prefersGrabberVisible = true
@@ -28,7 +30,7 @@ class SheetViewController: UIViewController, UISheetPresentationControllerDelega
       .large()
     ]
   }
-  fileprivate func setupConstraints() {
+  fileprivate func setupConstraints(swiftUIController: UIViewController) {
       swiftUIController.view.translatesAutoresizingMaskIntoConstraints = false
       swiftUIController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
       swiftUIController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
