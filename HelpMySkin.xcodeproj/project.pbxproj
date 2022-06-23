@@ -24,6 +24,11 @@
 		0B776D762863639100EA0081 /* NotificationSheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B776D752863639100EA0081 /* NotificationSheet.storyboard */; };
 		0B776D81286490EF00EA0081 /* NotificationSheetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B776D80286490EF00EA0081 /* NotificationSheetContentView.swift */; };
 		0B776D842864912300EA0081 /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = 0B776D832864912300EA0081 /* StepperView */; };
+		0B776D872864991300EA0081 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B776D862864991300EA0081 /* HttpError.swift */; };
+		0B776D892864994C00EA0081 /* TemperatureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B776D882864994C00EA0081 /* TemperatureModel.swift */; };
+		0B776D8E286499B200EA0081 /* TemperatureService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B776D8D286499B200EA0081 /* TemperatureService.swift */; };
+		0B776D90286499E100EA0081 /* TemperatureServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B776D8F286499E100EA0081 /* TemperatureServiceProtocol.swift */; };
+		0B776D9228649C9A00EA0081 /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B776D9128649C9A00EA0081 /* WeatherInfo.swift */; };
 		0B8379F02852196E001B7115 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8379EF2852196E001B7115 /* NotificationView.swift */; };
 		0B8379F22852198B001B7115 /* NotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8379F12852198B001B7115 /* NotificationView.xib */; };
 /* End PBXBuildFile section */
@@ -66,6 +71,11 @@
 		0B776D73286362A500EA0081 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 		0B776D752863639100EA0081 /* NotificationSheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationSheet.storyboard; sourceTree = "<group>"; };
 		0B776D80286490EF00EA0081 /* NotificationSheetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSheetContentView.swift; sourceTree = "<group>"; };
+		0B776D862864991300EA0081 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		0B776D882864994C00EA0081 /* TemperatureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureModel.swift; sourceTree = "<group>"; };
+		0B776D8D286499B200EA0081 /* TemperatureService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureService.swift; sourceTree = "<group>"; };
+		0B776D8F286499E100EA0081 /* TemperatureServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureServiceProtocol.swift; sourceTree = "<group>"; };
+		0B776D9128649C9A00EA0081 /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 		0B8379EF2852196E001B7115 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		0B8379F12852198B001B7115 /* NotificationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +186,8 @@
 		00E9D898284F8794004EE115 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0B776D8A2864997700EA0081 /* Services */,
+				0B776D85286498EF00EA0081 /* Enums */,
 				0B7277942861EDD9004B43D3 /* Models */,
 				00E9D899284F87A5004EE115 /* View */,
 			);
@@ -205,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				0B7277952861EDED004B43D3 /* Notification.swift */,
+				0B776D882864994C00EA0081 /* TemperatureModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +238,40 @@
 				0B776D80286490EF00EA0081 /* NotificationSheetContentView.swift */,
 			);
 			path = ContentView;
+			sourceTree = "<group>";
+		};
+		0B776D85286498EF00EA0081 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				0B776D9128649C9A00EA0081 /* WeatherInfo.swift */,
+				0B776D862864991300EA0081 /* HttpError.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		0B776D8A2864997700EA0081 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0B776D8C2864999000EA0081 /* Protocols */,
+				0B776D8B2864998800EA0081 /* Implementation */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0B776D8B2864998800EA0081 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				0B776D8D286499B200EA0081 /* TemperatureService.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		0B776D8C2864999000EA0081 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0B776D8F286499E100EA0081 /* TemperatureServiceProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		0B8379EE28521867001B7115 /* NotificationView */ = {
@@ -398,10 +445,15 @@
 			files = (
 				0B776D74286362A500EA0081 /* SheetViewController.swift in Sources */,
 				0B776D81286490EF00EA0081 /* NotificationSheetContentView.swift in Sources */,
+				0B776D8E286499B200EA0081 /* TemperatureService.swift in Sources */,
 				00E9D86A284F750A004EE115 /* TodaysRoutineViewController.swift in Sources */,
+				0B776D90286499E100EA0081 /* TemperatureServiceProtocol.swift in Sources */,
 				00E9D866284F750A004EE115 /* AppDelegate.swift in Sources */,
+				0B776D872864991300EA0081 /* HttpError.swift in Sources */,
+				0B776D892864994C00EA0081 /* TemperatureModel.swift in Sources */,
 				0B7277962861EDED004B43D3 /* Notification.swift in Sources */,
 				00E9D868284F750A004EE115 /* SceneDelegate.swift in Sources */,
+				0B776D9228649C9A00EA0081 /* WeatherInfo.swift in Sources */,
 				0B8379F02852196E001B7115 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -120,6 +120,7 @@
                         <outlet property="tableView" destination="2tl-Bd-2Of" id="xjS-AV-IzX"/>
                         <outlet property="temperatureText" destination="46u-a9-QJX" id="fje-e1-0MW"/>
                         <outlet property="weatherCardImage" destination="CNr-I2-Thu" id="4ZQ-tU-mYR"/>
+                        <outlet property="weatherCardText" destination="4QV-Tk-BeM" id="Xmx-Gj-i7G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
