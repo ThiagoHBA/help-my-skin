@@ -19,7 +19,7 @@ class WeatherImageUnityTest: XCTestCase {
     
     func test_obtainWeatherImage_shouldBe_Cloud() {
         //given
-        let temperature = -25.0
+        let temperature = -25
         
         //when
         let imageResult = controller.obtainWeatherIcon(temperature: temperature)
@@ -30,7 +30,7 @@ class WeatherImageUnityTest: XCTestCase {
     
     func test_obtainWeatherImage_shouldBe_Sunrise() {
         //given
-        let temperature = 50.0
+        let temperature = 5
         
         //when
         let imageResult = controller.obtainWeatherIcon(temperature: temperature)

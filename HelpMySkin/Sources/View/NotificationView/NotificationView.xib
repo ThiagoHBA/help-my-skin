@@ -26,7 +26,7 @@
                 </imageView>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IT2-B9-D8h">
                     <rect key="frame" x="0.0" y="76" width="338" height="4"/>
-                    <color key="progressTintColor" name="Secondary"/>
+                    <color key="progressTintColor" name="CallToAction"/>
                     <color key="trackTintColor" name="CallToAction"/>
                 </progressView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gN6-57-xOm">
@@ -71,9 +71,6 @@
         </namedColor>
         <namedColor name="Primary">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Secondary">
-            <color red="0.64313725490196083" green="0.72941176470588232" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

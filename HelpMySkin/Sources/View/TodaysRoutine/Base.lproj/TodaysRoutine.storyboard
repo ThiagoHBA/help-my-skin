@@ -74,7 +74,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2tl-Bd-2Of">
-                                <rect key="frame" x="20" y="434" width="374" height="335"/>
+                                <rect key="frame" x="20" y="434" width="374" height="428"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="separatorColor" name="Secondary"/>
                             </tableView>
@@ -110,7 +110,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CNr-I2-Thu" secondAttribute="trailing" constant="20" id="HBM-XD-Z7r"/>
                             <constraint firstItem="UEv-Sm-TVc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pgi-3p-tGr"/>
                             <constraint firstItem="2tl-Bd-2Of" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qCj-5S-Epl"/>
-                            <constraint firstItem="2tl-Bd-2Of" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-93" id="wY8-m4-9AV"/>
+                            <constraint firstItem="2tl-Bd-2Of" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wY8-m4-9AV"/>
                             <constraint firstItem="UEv-Sm-TVc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="yQt-q3-FgL"/>
                             <constraint firstItem="2tl-Bd-2Of" firstAttribute="centerX" secondItem="UEv-Sm-TVc" secondAttribute="centerX" id="zIo-rm-9nU"/>
                         </constraints>
