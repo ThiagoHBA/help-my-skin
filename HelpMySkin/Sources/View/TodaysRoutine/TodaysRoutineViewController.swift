@@ -12,7 +12,10 @@ class TodaysRoutineViewController: UIViewController {
     @IBOutlet weak var weatherCardImage: UIImageView!
     @IBOutlet weak var lastTimeRequestText: UILabel!
     @IBOutlet weak var temperatureText: UILabel!
+    @IBOutlet weak var weatherCardText: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
+  let temperatureService : TemperatureService = TemperatureService()
     public var notifications: [Notification] = Notification.sampleData
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +26,15 @@ class TodaysRoutineViewController: UIViewController {
         tableView.backgroundColor = UIColor(named: "Primary")
         let cellNib = UINib(nibName: NotificationView.identifier, bundle: .main)
         tableView.register(cellNib, forCellReuseIdentifier: NotificationView.identifier)
-        weatherCardImage.image = obtainWeatherIcon(temperature: -30)
-        lastTimeRequestText.text = obtainLastTimeRequestText(newTime: 61)
-        temperatureText.text = obtainTemperatureText(newValue: -30)
+        Task {
+                let data = await fetchApiData()
+                configureCard(temperatureData: data)
+        }
+//        weatherCardImage.image = obtainWeatherIcon(temperature: -30)
+//        lastTimeRequestText.text = obtainLastTimeRequestText(newTime: 61)
+//        temperatureText.text = obtainTemperatureText(newValue: -30)
     }
-    func obtainWeatherIcon (temperature: Double) -> UIImage {
+    func obtainWeatherIcon (temperature: Int) -> UIImage {
          if temperature < 10 {
            return UIImage(named: "thunder")!
         } else if temperature >= 10 && temperature < 20 {
@@ -44,6 +51,7 @@ class TodaysRoutineViewController: UIViewController {
         }
         return "\(newTime) minuto\(newTime>1 ? "s": "") atrás"
     }
+  
     func obtainTemperatureText(newValue: Int) -> String {
         let unity = "˚C"
         if newValue > 99 {
@@ -53,6 +61,28 @@ class TodaysRoutineViewController: UIViewController {
             return "-99\(unity)"
         }
         return "\(newValue)\(unity)"
+    }
+    func obtainWeatherCardText(temperature: Int) -> String {
+      if temperature < 20 {
+        return WeatherInfo.coldWeather.weatherCardText
+     }
+     return WeatherInfo.hotWeather.weatherCardText
+    }
+    func configureCard(temperatureData : Temperature?) {
+        if temperatureData != nil {
+            weatherCardImage.image = obtainWeatherIcon(temperature: Int(temperatureData!.temp))
+            lastTimeRequestText.text = obtainLastTimeRequestText(newTime: 0)
+            temperatureText.text = obtainTemperatureText(newValue: Int(temperatureData!.temp))
+            weatherCardText.text = obtainWeatherCardText(temperature: Int(temperatureData!.temp))
+        }
+    }
+    func fetchApiData() async -> Temperature? {
+        do {
+            return try await temperatureService.currentTemperature()
+        } catch {
+            print("Error")
+        }
+        return nil
     }
 }
 

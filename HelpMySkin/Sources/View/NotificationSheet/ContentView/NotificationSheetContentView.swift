@@ -1,8 +1,8 @@
 //
-//  NotificationSheetContentView.swift
-//  HelpMySkin
+//  SwiftUIView.swift
+//  informationSheet
 //
-//  Created by Lais Godinho on 23/06/22.
+//  Created by Emilly Maia on 22/06/22.
 //
 
 import SwiftUI
