@@ -101,10 +101,20 @@ extension TodaysRoutineViewController: UITableViewDataSource, UITableViewDelegat
     cell.selectedBackgroundView = bgColorView
     return cell
   }
-  
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let storyboard = UIStoryboard(name: "NotificationSheet", bundle: nil)
     let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "SheetViewController")
     self.present(sheetPresentationController, animated: true, completion: nil)
   }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.tableView.beginUpdates()
+            self.notifications.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            self.tableView.endUpdates()
+        }
+    }
 }
