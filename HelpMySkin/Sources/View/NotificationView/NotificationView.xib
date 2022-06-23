@@ -20,7 +20,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" id="aHW-Jz-uUA">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="aHW-Jz-uUA">
                     <rect key="frame" x="7" y="10" width="60" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
@@ -58,6 +58,7 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="descriptionLabel" destination="lv9-fM-DTB" id="n80-bg-ngU"/>
+                <outlet property="iconImage" destination="aHW-Jz-uUA" id="UZ1-sD-DCK"/>
                 <outlet property="titleLabel" destination="gN6-57-xOm" id="gFL-QH-Ca7"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>

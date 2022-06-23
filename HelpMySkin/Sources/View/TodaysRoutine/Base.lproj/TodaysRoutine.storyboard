@@ -66,8 +66,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.bolt.rain.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CNr-I2-Thu">
-                                <rect key="frame" x="284" y="161.5" width="110" height="102"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunny" translatesAutoresizingMaskIntoConstraints="NO" id="CNr-I2-Thu">
+                                <rect key="frame" x="284" y="161" width="110" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="7yt-Pd-0vf"/>
                                     <constraint firstAttribute="height" constant="100" id="88p-0L-Mq3"/>
@@ -129,7 +129,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud.bolt.rain.fill" catalog="system" width="122" height="128"/>
+        <image name="sunny" width="2500" height="2500"/>
         <namedColor name="Contrast">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
